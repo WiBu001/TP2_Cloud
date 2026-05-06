@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+data:
+  NAMA_PRAKTIKAN: "Daffa Dhiyaa Candra"
+  NIM_PRAKTIKAN: "2404286"

@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: merchstore-backend
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: backend
@@ -28,10 +28,6 @@ spec:
                 name: app-config
                 key: NIM_PRAKTIKAN
         imagePullPolicy: Always
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "250m"
         livenessProbe:
           httpGet:
             path: /api/info
