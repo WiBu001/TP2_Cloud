@@ -15,6 +15,18 @@ spec:
       containers:
       - name: backend-api
         image: siapadaffa/merchstore-backend:latest
+        env:
+          - name: NAMA_PRAKTIKAN
+            valueFrom:
+              ConfigMapKeyRef:
+                name: app-config
+                key: NAMA_PRAKTIKAN
+
+          - name: NIM_PRAKTIKAN
+            valueFrom:
+              ConfigMapKeyRef:
+                name: app-config
+                key: NIM_PRAKTIKAN
         imagePullPolicy: Always
         resources:
           limits:
