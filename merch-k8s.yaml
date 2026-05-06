@@ -18,13 +18,13 @@ spec:
         env:
           - name: NAMA_PRAKTIKAN
             valueFrom:
-              ConfigMapKeyRef:
+              configMapKeyRef:
                 name: app-config
                 key: NAMA_PRAKTIKAN
 
           - name: NIM_PRAKTIKAN
             valueFrom:
-              ConfigMapKeyRef:
+              configMapKeyRef:
                 name: app-config
                 key: NIM_PRAKTIKAN
         imagePullPolicy: Always
